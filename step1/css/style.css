@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+body {
+  background: #dde6ed;
+  color: #57575f;
+  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "MSPGothic", "ＭＳ Ｐゴシック", sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+a {
+  color: #35b6e0;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
+}
+
+/*-----------------------------------
+.boxArticle
+-----------------------------------*/
+.boxArticle {
+  background: #ffffff;
+  padding: 30px;
+  width: 500px;
+}
+
+.boxArticle:after {
+  clear: both;
+  content: "";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.boxArticle .articleUserThumb {
+  float: left;
+  width: 60px;
+}
+
+.boxArticle .articleUserThumb img {
+  border-radius: 50%;
+  height: 40px;
+  vertical-align: bottom;
+  width: 40px;
+}
+
+.boxArticle .articleContent {
+  float: left;
+  width: 440px;
+}
+
+.boxArticle .articleContent .articleHeader:after {
+  clear: both;
+  content: "";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.boxArticle .articleContent .articleHeader .userInfo {
+  float: left;
+}
+
+.boxArticle .articleContent .articleHeader .userInfo a {
+  color: #57575f;
+  text-decoration: none;
+}
+
+.boxArticle .articleContent .articleHeader .userInfo a:hover .accountId {
+  color: #35b6e0;
+}
+
+.boxArticle .articleContent .articleHeader .userInfo .userName {
+  font-size: 114.2%;
+  font-weight: bold;
+}
+
+.boxArticle .articleContent .articleHeader .userInfo .accountId {
+  color: #a3b3c3;
+  margin: 0 0 0 5px;
+}
+
+.boxArticle .articleContent .articleHeader .articleInfo {
+  float: right;
+}
+
+.boxArticle .articleContent .articleHeader .articleInfo .date {
+  color: #b7b5b4;
+}
+
+.boxArticle .articleContent .articleBody {
+  margin-top: 15px;
+}
+
+.boxArticle .articleContent .articleBody .content > *:first-child {
+  margin-top: 0;
+}
+
+.boxArticle .articleContent .articleBody .content > *:last-child {
+  margin-bottom: 0;
+}
+
+.boxArticle .articleContent .articleBody .attachImage {
+  text-align: center;
+}
+
+.boxArticle .articleContent .articleBody .attachImage .thumb {
+  border: 1px solid #dde6ed;
+  margin: 15px 0 0;
+}
+
+.boxArticle .articleContent .articleBody .attachImage .thumb img {
+  display: block;
+  vertical-align: bottom;
+  width: 100%;
+}
+
+.boxArticle .articleContent .articleTools {
+  margin-top: 15px;
+  text-align: right;
+}
+
+.boxArticle .articleContent .articleTools .tool {
+  display: inline-block;
+  margin: 0 0 0 10px;
+}
+
+.boxArticle .articleContent .articleTools .tool a {
+  color: #a3b3c3;
+}
+
+.boxArticle .articleContent .articleTools .tool a:hover {
+  color: #35b6e0;
+  text-decoration: none;
+}
+
+.boxArticle .articleContent .articleTools .tool .icon {
+  font-size: 114.2%;
+  top: 1px;
+  position: relative;
+  vertical-align: top;
+}
+
+.boxArticle .articleContent .articleTools .tool .text {
+  font-size: 85.7%;
+  margin: 0 0 0 5px;
+}
+
+.boxArticle .articleContent .articleTools .tool.reply {
+  float: left;
+  margin: 0 5px 0 0;
+}
+
+.modalBody .boxArticle .articleContent {
+  width: 400px;
+}
