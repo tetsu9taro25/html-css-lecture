@@ -1,0 +1,258 @@
+@charset "UTF-8";
+
+body {
+  background: #dde6ed;
+  color: #57575f;
+  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "MSPGothic", "ＭＳ Ｐゴシック", sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #56baf8;
+}
+
+input, button, textarea, select {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  appearance: none;
+  box-sizing: border-box;
+}
+
+i {
+  margin-right: 5px;
+  vertical-align: 0 !important;
+}
+
+$main-gray: #aaa;
+$thin-gray: #ccc;
+$bg-gray: #dde6ed;
+$main-blue: #3eb0f7;
+
+header {
+  background: #fff;
+  border-bottom: 1px solid $thin-gray;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    width: 900px;
+    margin: 0 auto;
+
+    nav {
+      display: flex;
+      margin-right: auto;
+
+      a {
+        display: block;
+        padding: 20px 20px 10px;
+        color: inherit;
+        border-bottom: 4px solid transparent;
+
+        &:hover {
+          border-bottom: 4px solid $main-blue;
+        }
+      }
+    }
+
+    .search-input {
+      position: relative;
+      margin-right: 20px;
+
+      input {
+        padding: 3px 27px 3px 10px;
+        border-radius: 20px;
+        border: 1px solid $thin-gray;
+      }
+
+      i {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+      }
+    }
+
+    .cog {
+      display: block;
+      width: 20px;
+      height: 20px;
+      margin: 2px 20px 0 0;
+      color: inherit;
+    }
+
+    .post-btn {
+      position: relative;
+      display: block;
+      width: 35px;
+      height: 35px;
+      margin-right: 10px;
+      border-radius: 50%;
+      background: $main-blue;
+      color: #fff;
+
+      i {
+        position: absolute;
+        top: 10px;
+        left: 9px;
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  width: 900px;
+  margin: 50px auto;
+}
+
+.side-column {
+  margin-right: auto;
+
+  .profile {
+    width: 300px;
+    border: 1px solid $thin-gray;
+
+    .name-box {
+      position: relative;
+      padding: 20px 20px 20px 135px;
+      background: $main-blue;
+
+      p {
+        margin: 0;
+        color: #fff;
+
+        a {
+          color: #fff;
+        }
+      }
+
+      .person-name {
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+
+      .person-icon {
+        position: absolute;
+        top: -30px;
+        left: 20px;
+
+        img {
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .post-box {
+      padding: 20px;
+      background: #fff;
+      overflow: hidden;
+
+      p {
+        margin: 0;
+      }
+
+      textarea {
+        width: 100%;
+        margin-top: 20px;
+        padding: 7px;
+        resize: none;
+        border: 1px solid $thin-gray;
+      }
+
+      button {
+        float: right;
+        margin-top: 20px;
+        padding: 7px 25px;
+        background: $bg-gray;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+.feed {
+  display: flex;
+  margin: 0 auto;
+  width: 510px;
+  padding: 20px;
+  background: #fff;
+  overflow: hidden;
+  border: 1px solid $thin-gray;
+
+  .person-icon {
+    margin-right: 10px;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  .name-date-box {
+    display: flex;
+  }
+
+  .name-box {
+    margin-right: auto;
+  }
+
+  .person-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+  .person-id {
+    margin-left: 5px;
+
+    a {
+      color: $main-gray;
+    }
+  }
+
+  .post-date {
+    margin-top: 20px;
+    color: $main-gray;
+  }
+
+  .comment {
+    margin-top: 0;
+
+    > a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .main-img {
+    height: 100px;
+    overflow: hidden;
+    border: 1px solid $main-gray;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .command-box {
+    display: flex;
+  }
+
+  .command-box a {
+    color: $main-gray;
+    text-decoration: none;
+  }
+
+  .command-box > p:last-child {
+    margin-left: 18px;
+  }
+
+  .reply {
+    margin-right: auto;
+  }
+}
