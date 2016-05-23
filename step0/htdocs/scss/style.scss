@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
 body {
+  position: relative;
+  height: 100%;
   background: #dde6ed;
   color: #57575f;
   font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "MSPGothic", "ＭＳ Ｐゴシック", sans-serif;
@@ -34,6 +36,80 @@ $main-gray: #aaa;
 $thin-gray: #ccc;
 $bg-gray: #dde6ed;
 $main-blue: #3eb0f7;
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 10;
+}
+
+.post-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 400px;
+  margin: 250px calc(50% - 200px);
+  z-index: 20;
+
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .modal-title {
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    color: #fff;
+    background: $main-blue;
+  }
+
+  .post-box {
+    padding-top: 0;
+  }
+}
+
+.post-box {
+  padding: 20px;
+  background: #fff;
+  overflow: hidden;
+
+  p {
+    margin: 0;
+  }
+
+  textarea {
+    width: 100%;
+    margin-top: 20px;
+    padding: 7px;
+    resize: none;
+    border: 1px solid $thin-gray;
+  }
+
+  button {
+    float: right;
+    margin-top: 20px;
+    padding: 7px 25px;
+    background: $main-blue;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .is-disabled {
+    opacity: 0.6;
+    cursor: default;
+  }
+}
 
 header {
   background: #fff;
@@ -147,33 +223,6 @@ main {
         }
       }
     }
-
-    .post-box {
-      padding: 20px;
-      background: #fff;
-      overflow: hidden;
-
-      p {
-        margin: 0;
-      }
-
-      textarea {
-        width: 100%;
-        margin-top: 20px;
-        padding: 7px;
-        resize: none;
-        border: 1px solid $thin-gray;
-      }
-
-      button {
-        float: right;
-        margin-top: 20px;
-        padding: 7px 25px;
-        background: $bg-gray;
-        border-radius: 20px;
-        cursor: pointer;
-      }
-    }
   }
 }
 
@@ -201,18 +250,23 @@ main {
 
   .name-box {
     margin-right: auto;
-  }
 
-  .person-name {
-    font-size: 1.1rem;
-    font-weight: bold;
-  }
 
-  .person-id {
-    margin-left: 5px;
+    .person-name {
+      font-size: 1.1rem;
+      font-weight: bold;
 
-    a {
-      color: $main-gray;
+      a {
+        color: inherit;
+      }
+    }
+
+    .person-id {
+      margin-left: 5px;
+
+      a {
+        color: $main-gray;
+      }
     }
   }
 
@@ -240,19 +294,26 @@ main {
   }
 
   .command-box {
-    display: flex;
-  }
+    overflow: hidden;
 
-  .command-box a {
-    color: $main-gray;
-    text-decoration: none;
-  }
+    a {
+      color: $main-gray;
+      text-decoration: none;
+    }
 
-  .command-box > p:last-child {
-    margin-left: 18px;
-  }
+    > p {
+      float: right;
+      margin-left: 18px;
 
-  .reply {
-    margin-right: auto;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    .reply {
+      display: none;
+      float: left;
+      margin-right: auto;
+    }
   }
 }
