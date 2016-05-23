@@ -10,13 +10,34 @@
   </head>
   <body>
     <div class="overlay"></div>
-    <div class="post-modal">
-      <i class="fa fa-lg fa-times close" aria-hidden="true"></i></a>
+    <div class="overlay-trans"></div>
+    <div class="post-modal modal-body">
+      <button class="close"><i class="fa fa-lg fa-times" aria-hidden="true"></i></button>
       <p class="modal-title">フィードを投稿する</p>
       <div class="post-box">
         <form>
           <textarea placeholder="投稿内容"></textarea>
           <button type="submit" class="is-disabled" disabled><i class="fa fa-lg fa-pencil" aria-hidden="true"></i>投稿する</button>
+        </form>
+      </div>
+    </div>
+    <div class="edit-modal modal-body">
+      <button class="close"><i class="fa fa-lg fa-times" aria-hidden="true"></i></button>
+      <p class="modal-title">フィードを編集する</p>
+      <div class="post-box">
+        <form>
+          <textarea placeholder="投稿内容"></textarea>
+          <button type="submit" class="is-disabled" disabled><i class="fa fa-lg fa-pencil" aria-hidden="true"></i>更新</button>
+        </form>
+      </div>
+    </div>
+    <div class="delete-modal modal-body">
+      <button class="close"><i class="fa fa-lg fa-times" aria-hidden="true"></i></button>
+      <p class="modal-title">このフィードを本当に削除しますか？</p>
+      <div class="post-box">
+        <p class="feed-desc">ほげええええええ</p>
+        <form>
+          <button type="submit"><i class="fa fa-lg fa-pencil" aria-hidden="true"></i>削除</button>
         </form>
       </div>
     </div>
@@ -31,8 +52,14 @@
           <input placeholder="検索">
           <i class="fa fa-search" aria-hidden="true"></i>
         </form>
-        <a href="#" class="cog"><i class="fa fa-lg fa-cog" aria-hidden="true"></i></a>
-        <a href="#" class="post-btn"><i class="fa fa-lg fa-pencil-square-o" aria-hidden="true"></i></a>
+        <div class="cog-wrapper">
+          <button class="cog-btn"><i class="fa fa-2x fa-cog" aria-hidden="true"></i></button>
+          <div class="cog-menu">
+            <p><a href="#"><i class="fa fa-fw fa-user" aria-hidden="true"></i>プロフィール編集</a></p>
+            <p><a href="#"><i class="fa fa-fw fa-sign-out" aria-hidden="true"></i>ログアウト</a></p>
+          </div>
+        </div>
+        <button class="post-btn"><i class="fa fa-lg fa-pencil-square-o" aria-hidden="true"></i></button>
       </div>
     </header>
     <main>

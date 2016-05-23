@@ -1,10 +1,8 @@
 $(function(){
-  function testAlert() {
-    alert("hogeeeee");
-  }
 
-  $('.cog').click(function(){
-    alert("hogeoooooo");
+  $('.cog-btn').click(function(){
+    $('.cog-menu').fadeToggle(200);
+    $('.overlay-trans').toggle();
   });
 
   $('.post-btn').click(function(){
@@ -13,11 +11,13 @@ $(function(){
   });
 
   $('.command-box .edit').click(function(){
-    alert("hogeoooooo");
+    $('.edit-modal').fadeIn(200);
+    $('.overlay').fadeIn(200);
   });
 
   $('.command-box .delete').click(function(){
-    alert("hogeoooooo");
+    $('.delete-modal').fadeIn(200);
+    $('.overlay').fadeIn(200);
   });
 
   $('.post-box textarea').bind('keydown keyup keypress change', function(){
@@ -30,14 +30,19 @@ $(function(){
 
   $('.overlay').click(function(){
     $(this).fadeOut(200);
-    $('.post-modal').fadeOut(200);
+    $('.modal-body').fadeOut(200);
     $('.post-box textarea').val('');
     $('.post-box button').addClass('is-disabled');
   });
 
+  $('.overlay-trans').click(function(){
+    $(this).hide();
+    $('.cog-menu').fadeToggle(200);
+  });
+
   $('.close').click(function(){
     $('.overlay').fadeOut(200);
-    $('.post-modal').fadeOut(200);
+    $('.modal-body').fadeOut(200);
     $('.post-box textarea').val('');
     $('.post-box button').addClass('is-disabled');
   });
